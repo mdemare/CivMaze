@@ -11,18 +11,26 @@
 - Warriors move toward the other city, then disappear
 - Animate warrior movement
 - Cities fire at enemy warriors
+- Bullets can miss.
+- No gravity
+- Separate maze for iphone
+- Textures for walls
+- Sprite for warrior
+- Warrior animations
+- Initial direction warrior is wrong
+- Sound effect when bullet hits 
 
 ## TODO
+- Bullets do damage. Warriors are destroyed after taking too much damage
+- No scaling
+- Bullets have a fixed speed
+- Visual effect when warrior explodes
+- Sound effect when warrior explodes
 - Cities have villagers that walk to spot to gather apples
 - Apple trees have textures
 - Cities grow with food
 - Allow buying and placing of turrets
 - Allow hoarding and releasing warriors
-- Bullets do damage. Warriors are destroyed after taking too much damage
-- Bullets have a fixed speed
-- Bullets can miss.
-- Textures for walls
-- Warrior animations
 - Use tiles, not sprites for walls
 - Place libraries
 - Default hidden map

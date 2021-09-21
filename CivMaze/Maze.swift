@@ -7,7 +7,8 @@ class Maze {
     var crossroads: [BoardPosition] = []
     
     class func linesFromResourceForced() -> [[Character]] {
-        if let path = Bundle.main.path(forResource: "maze", ofType: "txt") {
+        let resource = GameScene.IPAD ? "maze" : "smallmaze"
+        if let path = Bundle.main.path(forResource: resource, ofType: "txt") {
             do {
                 let data = try String(contentsOfFile: path, encoding: .utf8)
                 return data.components(separatedBy: .newlines).filter { $0.count > 0 }.map { Array($0) }
@@ -22,6 +23,9 @@ class Maze {
     
     init() {
         self.mazeData = Maze.linesFromResourceForced()
+        if mazeData.count < GameScene.ROW_COUNT {
+            print("\(mazeData.count) ROW COUNT \(GameScene.ROW_COUNT)")
+        }
         self.colCount = GameScene.COL_COUNT
         self.rowCount = GameScene.ROW_COUNT
     }
@@ -40,6 +44,6 @@ class Maze {
     func isEmpty(pos: BoardPosition) -> Bool {
         let row = mazeData[pos.row]
         let cell = row[pos.col]
-        return cell != "#"
+        return cell != "#" && pos.col < GameScene.COL_COUNT - 1
     }
 }
