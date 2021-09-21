@@ -13,6 +13,15 @@ enum Direction: Int, CaseIterable {
     case south = 2
     case west = 3
     
+    func warriorAnimationRange() -> Range<Int> {
+        switch self {
+        case .north: return 4..<8
+        case .east: return 12..<16
+        case .south: return 0..<4
+        case .west: return 8..<12
+        }
+    }
+    
     func turn(_ orientation: Orientation) -> Direction {
         switch orientation {
         case .straight: return self
@@ -48,15 +57,15 @@ struct BoardPosition: Equatable {
         return Direction.allCases.map { walkIn($0.vector()) }
     }
     
-    func direction(_ other: BoardPosition) -> Direction {
-        if col == other.col {
-            if row > other.row {
-                return .south
-            } else {
+    func direction(_ reference: BoardPosition) -> Direction {
+        if col == reference.col {
+            if row > reference.row {
                 return .north
+            } else {
+                return .south
             }
         } else {
-            if col > other.col {
+            if col > reference.col {
                 return .east
             } else {
                 return .west
@@ -125,22 +134,27 @@ class Warrior {
     var direction: Direction = Direction.north
     var sprite: SKSpriteNode?
     var attrition = 0
-    var alive: Bool = true
+    var health = 10.0
+    
+    var alive: Bool {
+        get { health > 0 }
+    }
 
     init(city: City) {
         self.city = city
         self.position = city.freePosition()
-        self.direction = city.position.direction(position)
+        self.direction = position.direction(city.position)
+        
         print("Creating warrior at \(position.col) \(position.row)")
     }
     
-    func advance() {
+    func advance() -> Bool {
         for orientation in Orientation.allCases {
             let newPos = position.walkIn(direction: direction, orientation: orientation)
             if city.maze.isEmpty(pos: newPos) {
                 position = newPos
                 direction = direction.turn(orientation)
-                return
+                return orientation == .straight ? false : true
             }
         }
         fatalError("No orientations worked")
@@ -167,9 +181,6 @@ class GameState {
         if(count % 5 == 0) {
             fire()
         }
-        if(count % 2 == 0) {
-            move()
-        }
         if(count % 10 == 0) {
             produce()
             consume()
@@ -192,16 +203,23 @@ class GameState {
     func deploy() {
         for city in cities {
             if(city.production > 10) {
-                city.production -= 1000
+                city.production -= 10
                 let warrior = Warrior(city: city)
                 warriors.append(warrior)
             }
-            break
         }
     }
     
-    func move() {
-        
+    func hit(warrior: Warrior) {
+        warrior.health -= 6.0
+        if !warrior.alive {
+            if let sprite = warrior.sprite {
+                sprite.removeFromParent()
+                warrior.sprite = nil
+                // TODO play explosion sound
+                // TODO show destruction animation
+            }
+        }
     }
     
     func produce() {

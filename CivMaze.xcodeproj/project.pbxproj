@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59FE015A26F5F8F00057DD1D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 59FE015926F5F8F00057DD1D /* GameScene.sks */; };
 		59FE016526F5F8F30057DD1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59FE016426F5F8F30057DD1D /* Assets.xcassets */; };
 		59FE016D26F5FA730057DD1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE016C26F5FA730057DD1D /* ContentView.swift */; };
 		59FE016F26F601C50057DD1D /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE016E26F601C50057DD1D /* Maze.swift */; };
 		59FE017126F602B80057DD1D /* maze.txt in Resources */ = {isa = PBXBuildFile; fileRef = 59FE017026F602B80057DD1D /* maze.txt */; };
 		59FE019826F618230057DD1D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE019726F618230057DD1D /* App.swift */; };
 		59FE019B26F633C00057DD1D /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE019A26F633C00057DD1D /* GameState.swift */; };
+		59FE019D26F8D0140057DD1D /* smallmaze.txt in Resources */ = {isa = PBXBuildFile; fileRef = 59FE019C26F8D0140057DD1D /* smallmaze.txt */; };
+		59FE019F26F930B50057DD1D /* bullet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 59FE019E26F930B40057DD1D /* bullet.mp3 */; };
+		59FE01A126F9315B0057DD1D /* bullet2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 59FE01A026F9315B0057DD1D /* bullet2.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		59FE015426F5F8F00057DD1D /* CivMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CivMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		59FE015926F5F8F00057DD1D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		59FE016426F5F8F30057DD1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59FE016626F5F8F30057DD1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59FE016C26F5FA730057DD1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,6 +28,9 @@
 		59FE019726F618230057DD1D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		59FE019926F61E2E0057DD1D /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		59FE019A26F633C00057DD1D /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		59FE019C26F8D0140057DD1D /* smallmaze.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = smallmaze.txt; sourceTree = "<group>"; };
+		59FE019E26F930B40057DD1D /* bullet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bullet.mp3; sourceTree = "<group>"; };
+		59FE01A026F9315B0057DD1D /* bullet2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bullet2.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				59FE017026F602B80057DD1D /* maze.txt */,
-				59FE015926F5F8F00057DD1D /* GameScene.sks */,
 				59FE016426F5F8F30057DD1D /* Assets.xcassets */,
 				59FE016626F5F8F30057DD1D /* Info.plist */,
 				59FE016C26F5FA730057DD1D /* ContentView.swift */,
@@ -68,6 +71,9 @@
 				59FE019726F618230057DD1D /* App.swift */,
 				59FE019926F61E2E0057DD1D /* TODO.md */,
 				59FE019A26F633C00057DD1D /* GameState.swift */,
+				59FE019E26F930B40057DD1D /* bullet.mp3 */,
+				59FE01A026F9315B0057DD1D /* bullet2.wav */,
+				59FE019C26F8D0140057DD1D /* smallmaze.txt */,
 			);
 			path = CivMaze;
 			sourceTree = "<group>";
@@ -129,7 +135,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59FE015A26F5F8F00057DD1D /* GameScene.sks in Resources */,
+				59FE019F26F930B50057DD1D /* bullet.mp3 in Resources */,
+				59FE019D26F8D0140057DD1D /* smallmaze.txt in Resources */,
+				59FE01A126F9315B0057DD1D /* bullet2.wav in Resources */,
 				59FE016526F5F8F30057DD1D /* Assets.xcassets in Resources */,
 				59FE017126F602B80057DD1D /* maze.txt in Resources */,
 			);
