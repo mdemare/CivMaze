@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59667D7226FB45FA009A6594 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59667D7126FB45FA009A6594 /* Launch Screen.storyboard */; };
+		59667D7426FBE650009A6594 /* tileset.sks in Resources */ = {isa = PBXBuildFile; fileRef = 59667D7326FBE650009A6594 /* tileset.sks */; };
+		59667D7626FCB324009A6594 /* color.shd in Resources */ = {isa = PBXBuildFile; fileRef = 59667D7526FCB324009A6594 /* color.shd */; };
+		59667D7826FE0350009A6594 /* radial.png in Resources */ = {isa = PBXBuildFile; fileRef = 59667D7726FE0350009A6594 /* radial.png */; };
+		59667D7A26FE0CB2009A6594 /* radialbig.png in Resources */ = {isa = PBXBuildFile; fileRef = 59667D7926FE0CB2009A6594 /* radialbig.png */; };
 		59FE016526F5F8F30057DD1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59FE016426F5F8F30057DD1D /* Assets.xcassets */; };
 		59FE016D26F5FA730057DD1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE016C26F5FA730057DD1D /* ContentView.swift */; };
 		59FE016F26F601C50057DD1D /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE016E26F601C50057DD1D /* Maze.swift */; };
@@ -19,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59667D7126FB45FA009A6594 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		59667D7326FBE650009A6594 /* tileset.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = tileset.sks; sourceTree = "<group>"; };
+		59667D7526FCB324009A6594 /* color.shd */ = {isa = PBXFileReference; lastKnownFileType = text; path = color.shd; sourceTree = "<group>"; };
+		59667D7726FE0350009A6594 /* radial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radial.png; sourceTree = "<group>"; };
+		59667D7926FE0CB2009A6594 /* radialbig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radialbig.png; sourceTree = "<group>"; };
 		59FE015426F5F8F00057DD1D /* CivMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CivMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FE016426F5F8F30057DD1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59FE016626F5F8F30057DD1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				59FE017026F602B80057DD1D /* maze.txt */,
+				59667D7126FB45FA009A6594 /* Launch Screen.storyboard */,
 				59FE016426F5F8F30057DD1D /* Assets.xcassets */,
 				59FE016626F5F8F30057DD1D /* Info.plist */,
 				59FE016C26F5FA730057DD1D /* ContentView.swift */,
@@ -74,6 +85,10 @@
 				59FE019E26F930B40057DD1D /* bullet.mp3 */,
 				59FE01A026F9315B0057DD1D /* bullet2.wav */,
 				59FE019C26F8D0140057DD1D /* smallmaze.txt */,
+				59667D7326FBE650009A6594 /* tileset.sks */,
+				59667D7526FCB324009A6594 /* color.shd */,
+				59667D7726FE0350009A6594 /* radial.png */,
+				59667D7926FE0CB2009A6594 /* radialbig.png */,
 			);
 			path = CivMaze;
 			sourceTree = "<group>";
@@ -135,11 +150,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59667D7426FBE650009A6594 /* tileset.sks in Resources */,
+				59667D7226FB45FA009A6594 /* Launch Screen.storyboard in Resources */,
 				59FE019F26F930B50057DD1D /* bullet.mp3 in Resources */,
 				59FE019D26F8D0140057DD1D /* smallmaze.txt in Resources */,
 				59FE01A126F9315B0057DD1D /* bullet2.wav in Resources */,
+				59667D7626FCB324009A6594 /* color.shd in Resources */,
 				59FE016526F5F8F30057DD1D /* Assets.xcassets in Resources */,
+				59667D7A26FE0CB2009A6594 /* radialbig.png in Resources */,
 				59FE017126F602B80057DD1D /* maze.txt in Resources */,
+				59667D7826FE0350009A6594 /* radial.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85DXLJ9Y5D;
 				INFOPLIST_FILE = CivMaze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85DXLJ9Y5D;
 				INFOPLIST_FILE = CivMaze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

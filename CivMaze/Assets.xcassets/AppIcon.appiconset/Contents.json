@@ -31,11 +31,13 @@
       "size" : "40x40"
     },
     {
+      "filename" : "maze-120.jpeg",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "maze-180.jpeg",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -76,11 +78,13 @@
       "size" : "76x76"
     },
     {
+      "filename" : "maze-152.jpeg",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
+      "filename" : "maze-167.jpeg",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
