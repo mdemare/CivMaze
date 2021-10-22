@@ -144,8 +144,6 @@ class Warrior {
         self.city = city
         self.position = city.freePosition()
         self.direction = position.direction(city.position)
-        
-        print("Creating warrior at \(position.col) \(position.row)")
     }
     
     func advance() -> Bool {
@@ -192,7 +190,7 @@ class GameState {
     func fire() {
         for city in cities {
             for warrior in warriors {
-                if city != warrior.city && city.position.distanceFrom(warrior.position) < 15 {
+                if city != warrior.city && city.position.distanceFrom(warrior.position) < 12 {
                     bullets.append(Bullet(city: city, warrior: warrior))
                     break
                 }
@@ -212,6 +210,7 @@ class GameState {
     
     func hit(warrior: Warrior) {
         warrior.health -= 6.0
+        print("Warrior hit, health now \(warrior.health)")
         if !warrior.alive {
             if let sprite = warrior.sprite {
                 sprite.removeFromParent()

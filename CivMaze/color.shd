@@ -1,0 +1,9 @@
+void main( void ){
+  vec4 color = texture2D(u_texture, v_tex_coord);
+  float alpha = color.a;
+  vec3 outputColor = color.rgb;
+  if (outputColor.x > 0.4 && outputColor.y < 0.1 && outputColor.z < 0.1) {
+    outputColor = vec3(0.05, 0.44, 0.05);
+  }
+  gl_FragColor = vec4(outputColor, 1.0) * alpha;
+}
